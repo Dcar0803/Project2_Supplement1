@@ -109,6 +109,22 @@ public class Node {
             }
         }
     }//end of insert method 
+    
+    public String dumpNode(int level) {
+        StringBuilder sb = new StringBuilder();
+        // Add tabs based on the level of depth
+        sb.append("\t".repeat(level));
+        sb.append("Node ID: ").append(nodeID).append(", Data: ").append(data).append("\n");
+
+        if (left != null) {
+            sb.append(left.dumpNode(level + 1));
+        }
+        if (right != null) {
+            sb.append(right.dumpNode(level + 1));
+        }
+
+        return sb.toString();
+    }
 
 
 }//end of Node class 
