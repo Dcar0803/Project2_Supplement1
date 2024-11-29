@@ -1,7 +1,8 @@
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
-class Test {
+class NodeTest {
 
 	@Test
     void testNodeCreation() {
