@@ -110,6 +110,14 @@ public class Node {
         }
     }//end of insert method 
     
+    /**
+     * Dumps the tree structure starting from the current node into a string.
+     * The string includes indentation based on the depth of the node in the tree.
+     * 
+     * @param level The current depth level of the node. The root level is 0.
+     * @return A string representation of the node and its subtree.
+     */
+    
     public String dumpNode(int level) {
         StringBuilder sb = new StringBuilder();
         // Add tabs based on the level of depth
