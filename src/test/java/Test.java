@@ -1,10 +1,14 @@
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class Test {
 
-	@org.junit.jupiter.api.Test
-	void test() {
-		fail("Not yet implemented");
-	}
-
-}
+	@Test
+    void testNodeCreation() {
+        Node node = new Node("root", 10);
+        assertEquals("root", node.getNodeId());
+        assertEquals(10, node.getData());
+        assertNull(node.getLeft());
+        assertNull(node.getRight());
+    }
+}//end of class 
