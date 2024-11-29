@@ -85,6 +85,22 @@ public class Node {
     public int getData() {
         return data;
     }//end of data getter
+    
+    public void insert(String newId, int value) {
+        if (value < this.data) {
+            if (this.left == null) {
+                this.left = new Node(newId, value);
+            } else {
+                this.left.insert(newId, value);
+            }
+        } else {
+            if (this.right == null) {
+                this.right = new Node(newId, value);
+            } else {
+                this.right.insert(newId, value);
+            }
+        }
+    }//end of insert method 
 
 
 }//end of Node class 
