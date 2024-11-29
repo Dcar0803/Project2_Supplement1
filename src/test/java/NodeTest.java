@@ -20,6 +20,7 @@ class NodeTest {
         assertNotNull(root.getLeft());
         assertEquals(5, root.getLeft().getData());
         assertEquals("left", root.getLeft().getNodeId());
+	}
 
         @Test
         void testInsertRight() {
