@@ -13,7 +13,7 @@ public class Node {
      * @param data The integer data stored in the node.
      */
 	
-	public Node(Node left, Node right, String nodeID, int data){
+	public Node(String nodeID, int data){
 		this.left = null;
 		this.right = null;
 		this.nodeID = nodeID;
