@@ -86,6 +86,14 @@ public class Node {
         return data;
     }//end of data getter
     
+    /**
+     * Inserts a new value into the tree. If the value is less than the current node's data,
+     * it is inserted into the left child; otherwise, it is inserted into the right child.
+     * 
+     * @param newId The unique ID of the new node to insert.
+     * @param value The data value to insert into the tree.
+     */
+    
     public void insert(String newId, int value) {
         if (value < this.data) {
             if (this.left == null) {
