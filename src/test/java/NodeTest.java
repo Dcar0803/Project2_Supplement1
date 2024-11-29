@@ -40,4 +40,21 @@ class NodeTest {
             assertEquals(3, root.getLeft().getLeft().getData());
             assertEquals("left-left", root.getLeft().getLeft().getNodeId());
         }
+        
+        @Test
+        void testDumpNode() {
+            Node root = new Node("root", 10);
+            root.insert("left", 5);
+            root.insert("right", 15);
+            root.insert("left-left", 3);
+            
+           
+            String expectedOutput = """
+                    Node ID: root, Data: 10
+                    \tNode ID: left, Data: 5
+                    \t\tNode ID: left-left, Data: 3
+                    \tNode ID: right, Data: 15
+                    """;
+            assertEquals(expectedOutput, root.dumpNode(0));
+        }
 }//end of class 
